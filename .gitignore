@@ -1,0 +1,50 @@
+# ===== 敏感信息：绝对不能进公开仓库 =====
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+secrets/
+
+# ===== dsh 本机产物 =====
+node_modules/
+lib/
+dist/
+*.tsbuildinfo
+apps/*/lib/
+packages/*/lib/
+vendor/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ===== 项目数据：含本机绝对路径，属隐私 =====
+# 画像与原始采集数据不进仓库（README 中已说明如何重新生成）
+data/raw/
+data/profiles/
+data/*.json
+!data/.gitkeep
+
+# ===== 评估产物 =====
+eval/baseline/
+eval/output/
+*.report.json
+
+# ===== 编辑器与系统 =====
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ===== 日志 =====
+*.log
+npm-debug.log*
+pnpm-debug.log*
